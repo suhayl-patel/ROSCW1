@@ -60,3 +60,7 @@ class CellBasedForwardSearch(GeneralForwardSearchAlgorithm):
     def hasCellBeenVisitedAlready(self, cell):
         return (cell.label == CellLabel.OBSTRUCTED) | (cell.label == CellLabel.DEAD) \
             | (cell.label == CellLabel.ALIVE)
+
+    # def costToGO(self, cell):
+    #     self.cell = cell
+    #     self.costToGO(self.cell) = float("inf")

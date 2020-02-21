@@ -10,17 +10,14 @@ from collections import deque
 
 class FIFOPlanner(CellBasedForwardSearch):
 
-    
     # Construct the new planner object
     def __init__(self, title, occupancyGrid):
         CellBasedForwardSearch.__init__(self, title, occupancyGrid)
         self.fifoQueue = deque()
 
-
     # Simply put on the end of the queue
     def pushCellOntoQueue(self, cell):
         self.fifoQueue.append(cell)
-	
 
     # Check the queue size is zero
     def isQueueEmpty(self):
@@ -30,9 +27,7 @@ class FIFOPlanner(CellBasedForwardSearch):
     def popCellFromQueue(self):
         cell = self.fifoQueue.popleft()
         return cell
-	
 
     def resolveDuplicate(self, cell, parentCell):
         # Nothing to do in self case
         pass
-
